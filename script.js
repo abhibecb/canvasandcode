@@ -145,7 +145,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const heroObserver = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        animateCounters();
         heroObserver.unobserve(entry.target);
       }
     });

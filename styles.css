@@ -3,7 +3,7 @@
   --primary-color: #6366f1;
   --primary-dark: #4f46e5;
   --primary-light: #818cf8;
-  --secondary-color: #f59e0b;
+  --secondary-color: #ffc107;
   --accent-color: #ec4899;
   --dark-color: #1f2937;
   --light-color: #f9fafb;
@@ -101,6 +101,12 @@ body {
   text-decoration: none;
 }
 
+.logo-image {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
 .logo i {
   font-size: 1.5rem;
   background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
@@ -162,26 +168,135 @@ body {
   transition: var(--transition);
 }
 
-/* Hero Section */
+/* Hero Section with Side-by-Side Layout */
 .hero {
   position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
+  background: linear-gradient(135deg, 
+    var(--primary-color) 0%, 
+    var(--primary-dark) 50%, 
+    var(--accent-color) 100%);
+  color: var(--white);
   overflow: hidden;
+  padding: 8rem 0 6rem;
+}
+
+/* Hero Headline Section */
+.hero-headline {
+  text-align: center;
+  margin-bottom: 4rem;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.3s forwards;
+}
+
+.hero-headline .hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  animation: float 20s ease-in-out infinite;
+  z-index: 1;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-main-image {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  min-height: 450px;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-xl);
+  object-fit: cover;
+  transform: scale(1.05);
+  transition: var(--transition);
+}
+
+.hero-main-image:hover {
+  transform: scale(1.08);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.hero-content {
+  text-align: left;
+  color: var(--white);
+}
+
+.hero-buttons-centered {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 4rem;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 1.1s forwards;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+  margin-top: 3rem;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.9s forwards;
 }
 
 .hero-background {
+  display: none; /* No longer needed */
+}
+
+/* Remove old hero image section styles */
+.hero-image-section {
+  display: none;
+}
+
+.hero-gif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, 
-    var(--primary-color) 0%, 
-    var(--primary-dark) 50%, 
-    var(--accent-color) 100%);
-  opacity: 0.95;
+    rgba(99, 102, 241, 0.7) 0%, 
+    rgba(79, 70, 229, 0.8) 50%, 
+    rgba(236, 72, 153, 0.7) 100%);
+  z-index: 2;
 }
 
 .hero-background::before {
@@ -221,6 +336,13 @@ body {
   margin-bottom: 1.5rem;
   opacity: 0;
   animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+/* Specific styling for headline hero-title */
+.hero-headline .hero-title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  margin-bottom: 0;
+  animation: fadeInUp 1s ease-out 0.3s forwards;
 }
 
 .highlight {
@@ -877,6 +999,13 @@ section {
   margin-bottom: 1rem;
 }
 
+.footer-logo-image {
+  height: 35px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Makes logo white for dark footer */
+}
+
 .footer-logo i {
   background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
   -webkit-background-clip: text;
@@ -1084,14 +1213,51 @@ section {
     transform: rotate(-45deg) translate(7px, -6px);
   }
 
-  .hero-buttons {
+  .hero {
+    padding: 6rem 0 4rem;
+    min-height: auto;
+  }
+
+  .hero-headline {
+    margin-bottom: 3rem;
+  }
+
+  .hero-headline .hero-title {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    text-align: center;
+    order: 2;
+  }
+
+  .hero-image-side {
+    order: 1;
+  }
+
+  .hero-main-image {
+    max-width: 450px;
+    min-height: 350px;
+    transform: scale(1.02);
+  }
+
+  .hero-buttons-centered {
     flex-direction: column;
     align-items: center;
+    margin-top: 2.5rem;
+    gap: 1rem;
   }
 
   .hero-stats {
-    flex-direction: column;
+    justify-content: center;
     gap: 1.5rem;
+    margin-top: 2rem;
   }
 
   .service-grid {
