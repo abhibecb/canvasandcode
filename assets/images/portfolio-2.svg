@@ -1,0 +1,16 @@
+<!-- Portfolio Item 2 - Fashion E-commerce -->
+<svg width="400" height="250" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="url(#portfolioGradient2)"/>
+  <rect x="50" y="50" width="300" height="150" rx="10" fill="rgba(255,255,255,0.9)"/>
+  <rect x="70" y="70" width="80" height="80" rx="5" fill="#8b5cf6"/>
+  <rect x="160" y="70" width="80" height="80" rx="5" fill="#06b6d4"/>
+  <rect x="250" y="70" width="80" height="80" rx="5" fill="#10b981"/>
+  <rect x="70" y="160" width="260" height="15" rx="5" fill="#6366f1"/>
+  <text x="200" y="220" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Fashion E-commerce</text>
+  <defs>
+    <linearGradient id="portfolioGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

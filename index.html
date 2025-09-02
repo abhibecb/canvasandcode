@@ -3,28 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Canvas & Code - Digital Marketing Agency</title>
+  
+  <!-- SEO Meta Tags -->
+  <title>Canvas & Code - Premium Digital Marketing Agency | SEO, Social Media & Web Development</title>
+  <meta name="description" content="Transform your business with Canvas & Code's premium digital marketing solutions. Expert SEO services, social media management, and stunning website development. 500+ happy clients with 98% success rate. Get started today!" />
+  <meta name="keywords" content="digital marketing agency, SEO services, social media management, website development, online marketing, search engine optimization, web design, digital strategy, content marketing, brand building" />
+  <meta name="author" content="Canvas & Code" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="revisit-after" content="7 days" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://canvasandcode.com/" />
+  
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Canvas & Code - Premium Digital Marketing Agency" />
+  <meta property="og:description" content="Transform your business with expert digital marketing solutions. SEO, social media management, and stunning website development with 98% success rate." />
+  <meta property="og:url" content="https://canvasandcode.com/" />
+  <meta property="og:site_name" content="Canvas & Code" />
+  <meta property="og:image" content="https://canvasandcode.com/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Canvas & Code - Premium Digital Marketing Agency" />
+  <meta name="twitter:description" content="Transform your business with expert digital marketing solutions. SEO, social media management, and stunning website development." />
+  <meta name="twitter:image" content="https://canvasandcode.com/images/twitter-card.jpg" />
+  <meta name="twitter:creator" content="@canvasandcode" />
+  <meta name="twitter:site" content="@canvasandcode" />
+  
+  <!-- Favicon and Icons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Canvas & Code",
+    "description": "Premium digital marketing agency specializing in SEO, social media management, and website development",
+    "url": "https://canvasandcode.com",
+    "logo": "https://canvasandcode.com/images/logo.png",
+    "foundingDate": "2020",
+    "email": "hello@canvasandcode.com",
+    "telephone": "+1-555-123-4567",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Business Ave, Suite 100",
+      "addressLocality": "New York",
+      "addressRegion": "NY",
+      "postalCode": "10001",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.7128",
+      "longitude": "-74.0060"
+    },
+    "sameAs": [
+      "https://www.facebook.com/canvasandcode",
+      "https://www.twitter.com/canvasandcode",
+      "https://www.linkedin.com/company/canvasandcode",
+      "https://www.instagram.com/canvasandcode"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-123-4567",
+      "contactType": "customer service",
+      "availableLanguage": "English"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "500",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "priceRange": "$$",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Digital Marketing Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "SEO Services",
+            "description": "Search Engine Optimization to boost your website visibility and organic traffic"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Social Media Management",
+            "description": "Complete social media strategy, content creation, and community management"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Website Development",
+            "description": "Modern, responsive websites designed to convert visitors into customers"
+          }
+        }
+      ]
+    }
+  }
+  </script>
 </head>
 <<body>
-  <header class="header">
+  <header class="header" role="banner">
     <div class="container">
       <div class="logo">
-        <i class="fas fa-palette"></i>
+        <i class="fas fa-palette" aria-label="Canvas & Code Logo"></i>
         <span>Canvas &amp; Code</span>
       </div>
-      <nav class="nav" id="nav">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#contact" class="nav-link">Contact</a>
+      <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+        <a href="#home" class="nav-link" aria-label="Go to Home section">Home</a>
+        <a href="#about" class="nav-link" aria-label="Go to About section">About</a>
+        <a href="#services" class="nav-link" aria-label="Go to Services section">Services</a>
+        <a href="#portfolio" class="nav-link" aria-label="Go to Portfolio section">Portfolio</a>
+        <a href="#contact" class="nav-link" aria-label="Go to Contact section">Contact</a>
       </nav>
-      <button class="nav-toggle" id="nav-toggle">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -32,131 +149,138 @@
     </div>
   </header>
 
-  <section id="home" class="hero">
-    <div class="hero-background">
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="container">
-      <div class="hero-content">
-        <h1 class="hero-title">
-          <span class="highlight">Premium</span> Digital Marketing Solutions
-        </h1>
-        <p class="hero-subtitle">We transform your brand through innovative social media strategies, cutting-edge SEO, and stunning website designs that convert.</p>
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Get Started Today</a>
-          <a href="#services" class="btn btn-secondary">
-            <i class="fas fa-play"></i>
-            Watch Demo
-          </a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <div class="stat-number">500+</div>
-            <div class="stat-label">Happy Clients</div>
+  <main>
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero-background">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <h1 id="hero-title" class="hero-title">
+            <span class="highlight">Premium</span> Digital Marketing Solutions
+          </h1>
+          <p class="hero-subtitle">We transform your brand through innovative social media strategies, cutting-edge SEO, and stunning website designs that convert.</p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary" aria-label="Get started with our services">Get Started Today</a>
+            <a href="#services" class="btn btn-secondary" aria-label="Watch our demo video">
+              <i class="fas fa-play" aria-hidden="true"></i>
+              Watch Demo
+            </a>
           </div>
-          <div class="stat">
-            <div class="stat-number">98%</div>
-            <div class="stat-label">Success Rate</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">24/7</div>
-            <div class="stat-label">Support</div>
+          <div class="hero-stats" aria-label="Company statistics">
+            <div class="stat">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">98%</div>
+              <div class="stat-label">Success Rate</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Support</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="scroll-indicator">
-      <i class="fas fa-chevron-down"></i>
-    </div>
-  </section>
+      <div class="scroll-indicator" aria-label="Scroll down to learn more">
+        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+      </div>
+    </section>
 
-  <section id="about" class="about">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">About Us</span>
-        <h2 class="section-title">Why Choose Canvas & Code?</h2>
-        <p class="section-subtitle">We're not just another agency. We're your digital growth partners.</p>
-      </div>
-      <div class="about-grid">
-        <div class="about-content">
-          <div class="about-features">
-            <div class="feature">
-              <i class="fas fa-award"></i>
-              <h4>Award-Winning Team</h4>
-              <p>Our experts have won multiple industry awards for innovation and results.</p>
+    <section id="about" class="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Us</span>
+          <h2 id="about-title" class="section-title">Why Choose Canvas & Code?</h2>
+          <p class="section-subtitle">We're not just another agency. We're your digital growth partners.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-content">
+            <div class="about-features">
+              <div class="feature">
+                <i class="fas fa-award" aria-label="Award icon"></i>
+                <div>
+                  <h3>Award-Winning Team</h3>
+                  <p>Our experts have won multiple industry awards for innovation and results.</p>
+                </div>
+              </div>
+              <div class="feature">
+                <i class="fas fa-chart-line" aria-label="Growth chart icon"></i>
+                <div>
+                  <h3>Proven Results</h3>
+                  <p>We've helped businesses increase their revenue by an average of 300%.</p>
+                </div>
+              </div>
+              <div class="feature">
+                <i class="fas fa-users" aria-label="Support team icon"></i>
+                <div>
+                  <h3>Dedicated Support</h3>
+                  <p>24/7 support and a dedicated account manager for every client.</p>
+                </div>
+              </div>
             </div>
-            <div class="feature">
-              <i class="fas fa-chart-line"></i>
-              <h4>Proven Results</h4>
-              <p>We've helped businesses increase their revenue by an average of 300%.</p>
-            </div>
-            <div class="feature">
-              <i class="fas fa-users"></i>
-              <h4>Dedicated Support</h4>
-              <p>24/7 support and a dedicated account manager for every client.</p>
+          </div>
+          <div class="about-image">
+            <div class="image-placeholder" role="img" aria-label="Digital analytics dashboard illustration">
+              <i class="fas fa-chart-bar" aria-hidden="true"></i>
             </div>
           </div>
         </div>
-        <div class="about-image">
-          <div class="image-placeholder">
-            <i class="fas fa-chart-bar"></i>
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="services" class="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Our Services</span>
-        <h2 class="section-title">What We Do Best</h2>
-        <p class="section-subtitle">Comprehensive digital solutions tailored to your business needs</p>
+    <section id="services" class="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Our Services</span>
+          <h2 id="services-title" class="section-title">What We Do Best</h2>
+          <p class="section-subtitle">Comprehensive digital solutions tailored to your business needs</p>
+        </div>
+        <div class="service-grid" role="list">
+          <article class="service-card" role="listitem">
+            <div class="service-icon">
+              <i class="fab fa-instagram" aria-label="Social media icon"></i>
+            </div>
+            <h3>Social Media Management</h3>
+            <p>Grow your audience and engagement with tailored social strategies that build communities and drive conversions.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check" aria-hidden="true"></i>Content Strategy</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i>Community Management</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i>Analytics & Reporting</li>
+            </ul>
+            <a href="#contact" class="service-link" aria-label="Learn more about social media management">Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="service-card featured" role="listitem">
+            <div class="featured-badge">Most Popular</div>
+            <div class="service-icon">
+              <i class="fas fa-search" aria-label="SEO icon"></i>
+            </div>
+            <h3>Search Engine Optimization</h3>
+            <p>Boost your visibility and ranking with data-driven SEO campaigns that deliver sustainable organic growth.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check" aria-hidden="true"></i>Technical SEO</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i>Content Optimization</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i>Link Building</li>
+            </ul>
+            <a href="#contact" class="service-link" aria-label="Learn more about SEO services">Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="service-card" role="listitem">
+            <div class="service-icon">
+              <i class="fas fa-code" aria-label="Web development icon"></i>
+            </div>
+            <h3>Website Development</h3>
+            <p>Modern, responsive websites designed to convert visitors into customers with stunning design and flawless functionality.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check" aria-hidden="true"></i>Responsive Design</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i>E-commerce Solutions</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i>Performance Optimization</li>
+            </ul>
+            <a href="#contact" class="service-link" aria-label="Learn more about website development">Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+        </div>
       </div>
-      <div class="service-grid">
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fab fa-instagram"></i>
-          </div>
-          <h3>Social Media Management</h3>
-          <p>Grow your audience and engagement with tailored social strategies that build communities and drive conversions.</p>
-          <ul class="service-features">
-            <li><i class="fas fa-check"></i>Content Strategy</li>
-            <li><i class="fas fa-check"></i>Community Management</li>
-            <li><i class="fas fa-check"></i>Analytics & Reporting</li>
-          </ul>
-          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="service-card featured">
-          <div class="featured-badge">Most Popular</div>
-          <div class="service-icon">
-            <i class="fas fa-search"></i>
-          </div>
-          <h3>Search Engine Optimization</h3>
-          <p>Boost your visibility and ranking with data-driven SEO campaigns that deliver sustainable organic growth.</p>
-          <ul class="service-features">
-            <li><i class="fas fa-check"></i>Technical SEO</li>
-            <li><i class="fas fa-check"></i>Content Optimization</li>
-            <li><i class="fas fa-check"></i>Link Building</li>
-          </ul>
-          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-code"></i>
-          </div>
-          <h3>Website Development</h3>
-          <p>Modern, responsive websites designed to convert visitors into customers with stunning design and flawless functionality.</p>
-          <ul class="service-features">
-            <li><i class="fas fa-check"></i>Responsive Design</li>
-            <li><i class="fas fa-check"></i>E-commerce Solutions</li>
-            <li><i class="fas fa-check"></i>Performance Optimization</li>
-          </ul>
-          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
   <section id="portfolio" class="portfolio">
     <div class="container">
@@ -416,9 +540,10 @@
       </div>
     </div>
   </footer>
+  </main>
 
-  <div class="back-to-top" id="back-to-top">
-    <i class="fas fa-chevron-up"></i>
+  <div class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
   </div>
 
   <script src="script.js"></script>
