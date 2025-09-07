@@ -6,26 +6,28 @@ document.addEventListener('DOMContentLoaded', function() {
   const nav = document.getElementById('nav');
   const backToTop = document.getElementById('back-to-top');
   
-  // Smooth scrolling for navigation links
+  // Smooth scrolling for in-page links (nav and buttons)
   const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
+  const internalLinks = document.querySelectorAll('a[href^="#"]');
+
+  function smoothScrollHandler(e) {
+    const targetId = this.getAttribute('href');
+    // Ignore empty hashes
+    if (!targetId || targetId === '#') return;
+    const targetSection = document.querySelector(targetId);
+    if (targetSection) {
       e.preventDefault();
-      const targetId = this.getAttribute('href');
-      const targetSection = document.querySelector(targetId);
-      
-      if (targetSection) {
-        targetSection.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-      
-      // Close mobile menu
-      nav.classList.remove('active');
-      navToggle.classList.remove('active');
-    });
-  });
+      targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    // Close mobile menu if open
+    nav.classList.remove('active');
+    navToggle.classList.remove('active');
+  }
+
+  // Attach to nav links
+  navLinks.forEach(link => link.addEventListener('click', smoothScrollHandler));
+  // Attach to all internal links (buttons etc.)
+  internalLinks.forEach(link => link.addEventListener('click', smoothScrollHandler));
   
   // Mobile navigation toggle
   navToggle.addEventListener('click', function() {
@@ -257,6 +259,34 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.addEventListener('mouseleave', function() {
       this.style.transform = 'translateY(0)';
     });
+  });
+
+  // Founders "Read more" toggle
+  function toggleFounderPanel(btn){
+    const targetId = btn.getAttribute('data-target');
+    const panel = document.getElementById(targetId);
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+
+    if (!panel) return;
+
+    if (expanded){
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+      requestAnimationFrame(() => { panel.style.maxHeight = '0px'; });
+      setTimeout(() => { panel.hidden = true; panel.style.maxHeight=''; }, 350);
+      btn.setAttribute('aria-expanded','false');
+      btn.textContent = 'Read more';
+    } else {
+      panel.hidden = false;
+      panel.style.maxHeight = '0px';
+      requestAnimationFrame(() => { panel.style.maxHeight = panel.scrollHeight + 'px'; });
+      setTimeout(() => { panel.style.maxHeight=''; }, 350);
+      btn.setAttribute('aria-expanded','true');
+      btn.textContent = 'Show less';
+    }
+  }
+
+  document.querySelectorAll('.founder-toggle[data-target]').forEach(btn => {
+    btn.addEventListener('click', () => toggleFounderPanel(btn));
   });
   
   // Preloader (optional)
