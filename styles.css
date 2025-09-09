@@ -4,6 +4,7 @@
   --primary-dark: #4f46e5;
   --primary-light: #818cf8;
   --secondary-color: #ffc107;
+  --secondary-light: #fff3cd;
   --accent-color: #ec4899;
   --dark-color: #1f2937;
   --light-color: #f9fafb;
@@ -782,10 +783,70 @@ section {
 }
 
 /* Services Section */
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+.services-carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
   gap: 2rem;
+}
+
+.services-carousel {
+  overflow: hidden;
+  flex: 1;
+}
+
+.service-grid {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+  flex: 0 0 calc(33.333% - 1.333rem); /* Each card takes 1/3 of visible area minus gap */
+  min-width: 300px;
+}
+
+.carousel-arrow {
+  background: var(--white);
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+}
+
+.carousel-arrow:hover {
+  background: var(--primary-color);
+  color: var(--white);
+  transform: scale(1.1);
+  box-shadow: var(--shadow-lg);
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.carousel-arrow:disabled:hover {
+  background: var(--white);
+  color: var(--primary-color);
 }
 
 .service-card {
@@ -1436,6 +1497,14 @@ section {
     gap: 2rem;
   }
 
+  .service-grid {
+    width: calc(100% * 5 / 2); /* Show 2 cards at a time on tablets */
+  }
+
+  .service-card {
+    flex: 0 0 calc(50% - 1rem); /* Each card takes half width on tablets */
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -1533,8 +1602,18 @@ section {
     margin-top: 2rem;
   }
 
+  .services-carousel-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   .service-grid {
-    grid-template-columns: 1fr;
+    width: calc(100% * 5 / 1); /* Show 1 card at a time on mobile */
+  }
+
+  .service-card {
+    flex: 0 0 100%; /* Each card takes full width on mobile */
+    min-width: 280px;
   }
 
   .service-card.featured {

@@ -238,14 +238,27 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   // Service card hover effects
-  const serviceCards = document.querySelectorAll('.service-card:not(.featured)');
+  const serviceCards = document.querySelectorAll('.service-card');
   serviceCards.forEach(card => {
     card.addEventListener('mouseenter', function() {
-      this.style.background = 'linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(236, 72, 153, 0.05))';
+      // Apply hover effects to all cards
+      this.style.transform = 'translateY(-12px) scale(1.03)';
+      this.style.boxShadow = '0 20px 40px -12px rgba(0, 0, 0, 0.15), 0 8px 16px -8px rgba(0, 0, 0, 0.1)';
+      
+      // Only change background for non-featured cards
+      if (!this.classList.contains('featured')) {
+        this.style.background = 'linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(236, 72, 153, 0.05))';
+      }
     });
     
     card.addEventListener('mouseleave', function() {
-      this.style.background = 'var(--white)';
+      this.style.transform = 'translateY(0) scale(1)';
+      this.style.boxShadow = 'var(--shadow-md)';
+      
+      // Only reset background for non-featured cards
+      if (!this.classList.contains('featured')) {
+        this.style.background = 'var(--white)';
+      }
     });
   });
   
@@ -354,7 +367,90 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Initialize
   updateActiveNavLink();
+
+  // Services Carousel Functionality
+  initServicesCarousel();
 });
+
+function initServicesCarousel() {
+  const carousel = document.querySelector('.service-grid');
+  const prevButton = document.querySelector('.carousel-arrow-left');
+  const nextButton = document.querySelector('.carousel-arrow-right');
+  
+  if (!carousel || !prevButton || !nextButton) return;
+  
+  let currentIndex = 0;
+  const totalCards = carousel.children.length;
+  
+  // Function to get cards per view based on screen size
+  function getCardsPerView() {
+    if (window.innerWidth <= 768) return 1;
+    if (window.innerWidth <= 1024) return 2;
+    return 3;
+  }
+  
+  // Function to update carousel position
+  function updateCarousel() {
+    const cardsPerView = getCardsPerView();
+    const maxIndex = Math.max(0, totalCards - cardsPerView);
+    
+    // Ensure currentIndex is within bounds
+    currentIndex = Math.min(currentIndex, maxIndex);
+    
+    const cardWidth = carousel.children[0].offsetWidth;
+    const gap = 32; // 2rem in pixels
+    const translateX = -(currentIndex * (cardWidth + gap));
+    
+    carousel.style.transform = `translateX(${translateX}px)`;
+    
+    // Update button states
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex >= maxIndex;
+  }
+  
+  // Event listeners for navigation buttons
+  prevButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+  
+  nextButton.addEventListener('click', () => {
+    const cardsPerView = getCardsPerView();
+    const maxIndex = Math.max(0, totalCards - cardsPerView);
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+      currentIndex++;
+      currentIndex++;
+      
+      updateCarousel();
+    }
+  });
+  
+  // Handle window resize
+  window.addEventListener('resize', debounce(() => {
+    updateCarousel();
+  }, 250));
+  
+  // Keyboard navigation
+  carousel.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      prevButton.click();
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      nextButton.click();
+    }
+  });
+  
+  // Make carousel focusable for keyboard navigation
+  carousel.tabIndex = 0;
+  
+  // Initialize carousel
+  updateCarousel();
+}
 
 // Additional utility functions
 function debounce(func, wait) {
