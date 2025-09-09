@@ -1,576 +1,793 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- SEO Meta Tags -->
-  <title>Canvas & Code - Premium Digital Marketing Agency | SEO, Social Media & Web Development</title>
-  <meta name="description" content="Transform your business with Canvas & Code's premium digital marketing solutions. Expert SEO services, social media management, and stunning website development. 500+ happy clients with 98% success rate. Get started today!" />
-  <meta name="keywords" content="digital marketing agency, SEO services, social media management, website development, online marketing, search engine optimization, web design, digital strategy, content marketing, brand building" />
-  <meta name="author" content="Canvas & Code" />
-  <meta name="robots" content="index, follow" />
-  <meta name="language" content="English" />
-  <meta name="revisit-after" content="7 days" />
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://canvasandcode.com/" />
-  
-  <!-- Open Graph Meta Tags for Social Media -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Canvas & Code - Premium Digital Marketing Agency" />
-  <meta property="og:description" content="Transform your business with expert digital marketing solutions. SEO, social media management, and stunning website development with 98% success rate." />
-  <meta property="og:url" content="https://canvasandcode.com/" />
-  <meta property="og:site_name" content="Canvas & Code" />
-  <meta property="og:image" content="https://canvasandcode.com/images/og-image.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:locale" content="en_US" />
-  
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Canvas & Code - Premium Digital Marketing Agency" />
-  <meta name="twitter:description" content="Transform your business with expert digital marketing solutions. SEO, social media management, and stunning website development." />
-  <meta name="twitter:image" content="https://canvasandcode.com/images/twitter-card.jpg" />
-  <meta name="twitter:creator" content="@canvasandcode" />
-  <meta name="twitter:site" content="@canvasandcode" />
-  
-  <!-- Favicon and Icons -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  
-  <!-- Preconnect for Performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css" />
-  
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Canvas & Code",
-    "description": "Premium digital marketing agency specializing in SEO, social media management, and website development",
-    "url": "https://canvasandcode.com",
-    "logo": "https://canvasandcode.com/images/logo.png",
-    "foundingDate": "2020",
-    "email": "hello@canvasandcode.com",
-    "telephone": "+1-555-123-4567",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Business Ave, Suite 100",
-      "addressLocality": "New York",
-      "addressRegion": "NY",
-      "postalCode": "10001",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "40.7128",
-      "longitude": "-74.0060"
-    },
-    "sameAs": [
-      "https://www.facebook.com/canvasandcode",
-      "https://www.twitter.com/canvasandcode",
-      "https://www.linkedin.com/company/canvasandcode",
-      "https://www.instagram.com/canvasandcode"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
-      "contactType": "customer service",
-      "availableLanguage": "English"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "500",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "priceRange": "$$",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Digital Marketing Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "SEO Services",
-            "description": "Search Engine Optimization to boost your website visibility and organic traffic"
-          }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>
+      Canvas & Code - Premium Digital Marketing Agency | SEO, Social Media & Web
+      Development
+    </title>
+    <meta
+      name="description"
+      content="Transform your business with Canvas & Code's premium digital marketing solutions. Expert SEO services, social media management, and stunning website development. 500+ happy clients with 98% success rate. Get started today!"
+    />
+    <meta
+      name="keywords"
+      content="digital marketing agency, SEO services, social media management, website development, online marketing, search engine optimization, web design, digital strategy, content marketing, brand building"
+    />
+    <meta name="author" content="Canvas & Code" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://canvasandcode.com/" />
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Canvas & Code - Premium Digital Marketing Agency"
+    />
+    <meta
+      property="og:description"
+      content="Transform your business with expert digital marketing solutions. SEO, social media management, and stunning website development with 98% success rate."
+    />
+    <meta property="og:url" content="https://canvasandcode.com/" />
+    <meta property="og:site_name" content="Canvas & Code" />
+    <meta
+      property="og:image"
+      content="https://canvasandcode.com/images/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Canvas & Code - Premium Digital Marketing Agency"
+    />
+    <meta
+      name="twitter:description"
+      content="Transform your business with expert digital marketing solutions. SEO, social media management, and stunning website development."
+    />
+    <meta
+      name="twitter:image"
+      content="https://canvasandcode.com/images/twitter-card.jpg"
+    />
+    <meta name="twitter:creator" content="@canvasandcode" />
+    <meta name="twitter:site" content="@canvasandcode" />
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Canvas & Code",
+        "description": "Premium digital marketing agency specializing in SEO, social media management, and website development",
+        "url": "https://canvasandcode.com",
+        "logo": "https://canvasandcode.com/images/logo.png",
+        "foundingDate": "2020",
+        "email": "hello@canvasandcode.com",
+        "telephone": "+1-555-123-4567",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Business Ave, Suite 100",
+          "addressLocality": "New York",
+          "addressRegion": "NY",
+          "postalCode": "10001",
+          "addressCountry": "US"
         },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Social Media Management",
-            "description": "Complete social media strategy, content creation, and community management"
-          }
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "40.7128",
+          "longitude": "-74.0060"
         },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Website Development",
-            "description": "Modern, responsive websites designed to convert visitors into customers"
-          }
+        "sameAs": [
+          "https://www.facebook.com/canvasandcode",
+          "https://www.twitter.com/canvasandcode",
+          "https://www.linkedin.com/company/canvasandcode",
+          "https://www.instagram.com/canvasandcode"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-555-123-4567",
+          "contactType": "customer service",
+          "availableLanguage": "English"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "500",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "priceRange": "$$",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Digital Marketing Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "SEO Services",
+                "description": "Search Engine Optimization to boost your website visibility and organic traffic"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Social Media Management",
+                "description": "Complete social media strategy, content creation, and community management"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Website Development",
+                "description": "Modern, responsive websites designed to convert visitors into customers"
+              }
+            }
+          ]
         }
-      ]
-    }
-  }
-  </script>
-</head>
-<body>
-  <header class="header" role="banner">
-    <div class="container">
-      <div class="logo">
-        <img src="assets/images/logo.png" alt="Canvas & Code Logo" class="logo-image">
-        
-      </div>
-      <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
-        <a href="#home" class="nav-link" aria-label="Go to Home section">Home</a>
-        <a href="#about" class="nav-link" aria-label="Go to About section">About</a>
-        <a href="#services" class="nav-link" aria-label="Go to Services section">Services</a>
-        <a href="#portfolio" class="nav-link" aria-label="Go to Portfolio section">Portfolio</a>
-        <a href="#contact" class="nav-link" aria-label="Go to Contact section">Contact</a>
-      </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero Section with Better Hierarchy -->
-    <section id="home" class="hero" aria-labelledby="hero-title">
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header" role="banner">
       <div class="container">
-        <!-- Main Headline First -->
-        <div class="hero-headline">
-          <h1 id="hero-title" class="hero-title">
-            <span class="highlight">Marketing </span> that actually works
-          </h1>
+        <div class="logo">
+          <img
+            src="assets/images/logo.png"
+            alt="Canvas & Code Logo"
+            class="logo-image"
+          />
         </div>
-        
-        <!-- Side-by-Side: GIF + Subtitle -->
-        <div class="hero-grid">
-          <!-- Left Side - GIF -->
-          <div class="hero-image-side">
-            <img src="assets/images/Herosection.gif" alt="Canvas & Code Hero Animation" class="hero-main-image">
+        <nav
+          class="nav"
+          id="nav"
+          role="navigation"
+          aria-label="Main navigation"
+        >
+          <a href="#home" class="nav-link" aria-label="Go to Home section"
+            >Home</a
+          >
+          <a href="#about" class="nav-link" aria-label="Go to About section"
+            >About</a
+          >
+          <a
+            href="#services"
+            class="nav-link"
+            aria-label="Go to Services section"
+            >Services</a
+          >
+          <a
+            href="#portfolio"
+            class="nav-link"
+            aria-label="Go to Portfolio section"
+            >Portfolio</a
+          >
+          <a href="#contact" class="nav-link" aria-label="Go to Contact section"
+            >Contact</a
+          >
+        </nav>
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section with Better Hierarchy -->
+      <section id="home" class="hero" aria-labelledby="hero-title">
+        <div class="container">
+          <!-- Main Headline First -->
+          <div class="hero-headline">
+            <h1 id="hero-title" class="hero-title">
+              <span class="highlight">Marketing </span> that actually works
+            </h1>
           </div>
-          
-          <!-- Right Side - Subtitle + Stats -->
-          <div class="hero-content">
-            <p class="hero-subtitle">At Canvas and Code Digital, we specialise in helping small businesses grow online. From social media marketing campaigns to SEO services and custom website design, everything we do is tailored to attract, engage, and convert the right audience for your brand..</p>
-            <div class="hero-stats" aria-label="Company statistics">
-              <div class="stat">
-                <div class="stat-title">Founder-Led</div>
-                <div class="stat-label">Expertise</div>
+
+          <!-- Side-by-Side: GIF + Subtitle -->
+          <div class="hero-grid">
+            <!-- Left Side - GIF -->
+            <div class="hero-image-side">
+              <img
+                src="assets/images/Herosection.gif"
+                alt="Canvas & Code Hero Animation"
+                class="hero-main-image"
+              />
+            </div>
+
+            <!-- Right Side - Subtitle + Stats -->
+            <div class="hero-content">
+              <p class="hero-subtitle">
+                At Canvas and Code Digital, we specialise in helping small
+                businesses grow online. From social media marketing campaigns to
+                SEO services and custom website design, everything we do is
+                tailored to attract, engage, and convert the right audience for
+                your brand..
+              </p>
+              <div class="hero-stats" aria-label="Company statistics">
+                <div class="stat">
+                  <div class="stat-title">Founder-Led</div>
+                  <div class="stat-label">Expertise</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-title">Tailored for</div>
+                  <div class="stat-label">Every Business</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-title">Dedicated</div>
+                  <div class="stat-label">Support</div>
+                </div>
               </div>
-              <div class="stat">
-                <div class="stat-title">Tailored for</div>
-                <div class="stat-label">Every Business</div>
-              </div>
-              <div class="stat">
-                <div class="stat-title">Dedicated</div>
-                <div class="stat-label">Support</div>
-              </div>
-              
             </div>
           </div>
-        </div>
-        
-        <!-- Centered Buttons Below Everything -->
-        <div class="hero-buttons-centered">
-          <a href="#contact" class="btn btn-primary" aria-label="Get started with our services">Book a Free Consultation</a>
-          <a href="#services" class="btn btn-secondary" aria-label="Watch our demo video">
-            View Our Work
-          </a>
-        </div>
-      </div>
-    </section>
 
-    <section id="about" class="about" aria-labelledby="about-title">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">About Us</span>
-          <p class="section-subtitle">At Canvas and Code Digital, we believe that great marketing blends creativity with strategy—and that’s exactly what we bring to every project.</p>
-        </div>
-
-        <div class="founders-grid">
-        
-
-          <!-- Ayushi -->
-          <article class="founder-card" id="card-ayushi">
-            <img class="founder-avatar" src="assets/images/Ayushi.jpeg" alt="Ayushi Gupta headshot" />
-            <h3 class="founder-name">Ayushi Gupta</h3>
-            <p class="founder-role">Director, Digital Marketing Strategist</p>
-            <p class="founder-teaser">Marketing strategist helping small businesses grow online.</p>
-
-            <div id="founder-more-ayushi" class="founder-more" hidden>
-              <p>Ayushi is the driving force behind our digital marketing solutions. With over 5 years of experience in social media management, SEO, and paid advertising, she helps small businesses cut through the noise and connect with the right audience. Known for her hands-on approach and eye for strategy, Ayushi transforms ideas into campaigns that deliver measurable results. She’s passionate about making marketing feel simple, intentional, and effective for business owners.</p>
-              <p><strong>Focus:</strong> Offers that convert, content systems, and practical analytics.</p>
-            </div>
-
-            <div class="actions">
-              <button class="btn founder-toggle"
-                      data-target="founder-more-ayushi"
-                      aria-expanded="false"
-                      aria-controls="founder-more-ayushi">
-                Read more
-              </button>
-            </div>
-          </article>
-            <!-- Abhishek -->
-          <article class="founder-card" id="card-abhishek">
-            <img class="founder-avatar" src="assets/images/Abhishek.jpeg" alt="Abhishek Gupta headshot" />
-            <h3 class="founder-name">Abhishek Gupta</h3>
-            <p class="founder-role">Director, Technical Head</p>
-            <p class="founder-teaser">20+ years simplifying tech into digital solutions.</p>
-
-            <div id="founder-more-abhishek" class="founder-more" hidden>
-              <p>Abhishek brings over 20 years of expertise in web development and frontend engineering. Having worked with complex systems and cutting-edge technologies, he specialises in building websites and digital solutions that are fast, functional, and user-friendly. His deep technical knowledge ensures that the creative campaigns we design are always supported by robust, scalable, and future-ready technology.</p>
-              <p><strong>Focus:</strong> Web performance, accessibility, and maintainable front-end architecture.</p>
-            </div>
-
-            <div class="actions">
-              <button class="btn founder-toggle"
-                      data-target="founder-more-abhishek"
-                      aria-expanded="false"
-                      aria-controls="founder-more-abhishek">
-                Read more
-              </button>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="services" aria-labelledby="services-title">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Our Services</span>
-          <p class="section-subtitle">Comprehensive digital solutions tailored to your business needs</p>
-        </div>
-        <div class="service-grid" role="list">
-          <article class="service-card featured" role="listitem">
-            <div class="featured-badge">Most Popular</div>
-            <div class="service-icon">
-              <i class="fab fa-instagram" aria-label="Social media icon"></i>
-              <i class="fab fa-facebook" aria-label="Social media icon"></i>
-              <i class="fab fa-youtube" aria-label="Social media icon"></i>
-              <i class="fab fa-twitter" aria-label="Social media icon"></i>
-              <i class="fab fa-linkedin" aria-label="Social media icon"></i>
-              <i class="fab fa-pinterest" aria-label="Social media icon"></i>
-            </div>
-            <h3>Social Media Management</h3>
-            <p>Grow your audience and engagement with tailored social strategies that build communities and drive conversions.</p>
-            <ul class="service-features">
-              <li><i class="fas fa-check" aria-hidden="true"></i>Content Strategy</li>
-              <li><i class="fas fa-check" aria-hidden="true"></i>Community Management</li>
-              <li><i class="fas fa-check" aria-hidden="true"></i>Analytics & Reporting</li>
-            </ul>
-            <a href="#contact" class="service-link" aria-label="Learn more about social media management">Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-          </article>
-          <article class="service-card " role="listitem">
-            <div class="service-icon">
-              <i class="fas fa-search" aria-label="SEO icon"></i>
-            </div>
-            <h3>Search Engine Optimization</h3>
-            <p>Boost your visibility and ranking with data-driven SEO campaigns that deliver sustainable organic growth.</p>
-            <ul class="service-features">
-              <li><i class="fas fa-check" aria-hidden="true"></i>Technical SEO</li>
-              <li><i class="fas fa-check" aria-hidden="true"></i>Content Optimization</li>
-              <li><i class="fas fa-check" aria-hidden="true"></i>Link Building</li>
-            </ul>
-            <a href="#contact" class="service-link" aria-label="Learn more about SEO services">Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-          </article>
-          <article class="service-card" role="listitem">
-            <div class="service-icon">
-              <i class="fas fa-code" aria-label="Web development icon"></i>
-            </div>
-            <h3>Website Development</h3>
-            <p>Modern, responsive websites designed to convert visitors into customers with stunning design and flawless functionality.</p>
-            <ul class="service-features">
-              <li><i class="fas fa-check" aria-hidden="true"></i>Responsive Design</li>
-              <li><i class="fas fa-check" aria-hidden="true"></i>E-commerce Solutions</li>
-              <li><i class="fas fa-check" aria-hidden="true"></i>Performance Optimization</li>
-            </ul>
-            <a href="#contact" class="service-link" aria-label="Learn more about website development">Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Our Work</span>
-        <p class="section-subtitle">See how we've helped businesses like yours achieve remarkable growth</p>
-      </div>
-      <div class="portfolio-grid">
-        <div class="portfolio-item">
-          <div class="portfolio-image">
-            <div class="image-placeholder">
-              <i class="fas fa-shopping-cart"></i>
-            </div>
-            <div class="portfolio-overlay">
-              <h4>E-commerce Platform</h4>
-              <p>300% increase in sales</p>
-              <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
-            </div>
+          <!-- Centered Buttons Below Everything -->
+          <div class="hero-buttons-centered">
+            <a
+              href="#contact"
+              class="btn btn-primary"
+              aria-label="Get started with our services"
+              >Book a Free Consultation</a
+            >
+            <a
+              href="#services"
+              class="btn btn-secondary"
+              aria-label="Watch our demo video"
+            >
+              View Our Work
+            </a>
           </div>
         </div>
-        <div class="portfolio-item">
-          <div class="portfolio-image">
-            <div class="image-placeholder">
-              <i class="fas fa-heartbeat"></i>
-            </div>
-            <div class="portfolio-overlay">
-              <h4>Healthcare Website</h4>
-              <p>500% more appointments</p>
-              <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <div class="portfolio-image">
-            <div class="image-placeholder">
-              <i class="fas fa-utensils"></i>
-            </div>
-            <div class="portfolio-overlay">
-              <h4>Restaurant Chain</h4>
-              <p>250% social engagement</p>
-              <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <div class="portfolio-image">
-            <div class="image-placeholder">
-              <i class="fas fa-graduation-cap"></i>
-            </div>
-            <div class="portfolio-overlay">
-              <h4>Education Platform</h4>
-              <p>400% student enrollment</p>
-              <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section class="testimonials">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Testimonials</span>
-      </div>
-      <div class="testimonial-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p>"Canvas & Code transformed our online presence completely. Our sales increased by 300% in just 6 months!"</p>
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">
-              <i class="fas fa-user"></i>
-            </div>
-            <div class="author-info">
-              <h4>Sarah Johnson</h4>
-              <p>CEO, TechStart</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p>"The team's expertise in SEO is unmatched. We're now ranking #1 for all our target keywords."</p>
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">
-              <i class="fas fa-user"></i>
-            </div>
-            <div class="author-info">
-              <h4>Mike Chen</h4>
-              <p>Founder, GrowthCorp</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p>"Professional, reliable, and results-driven. Canvas & Code exceeded all our expectations."</p>
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">
-              <i class="fas fa-user"></i>
-            </div>
-            <div class="author-info">
-              <h4>Emily Davis</h4>
-              <p>Marketing Director, InnovateLab</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="contact-wrapper">
-        <div class="contact-info">
+      <section id="about" class="about" aria-labelledby="about-title">
+        <div class="container">
           <div class="section-header">
-            <span class="section-tag">Get In Touch</span>
-            <p class="section-subtitle">Let's discuss how we can help you achieve your digital marketing goals.</p>
+            <span class="section-tag">About Us</span>
+            <p class="section-subtitle">
+              At Canvas and Code Digital, we believe that great marketing blends
+              creativity with strategy—and that’s exactly what we bring to every
+              project.
+            </p>
           </div>
-          <div class="contact-details">
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <div>
-                <h4>Phone</h4>
-                <p>+1 (555) 123-4567</p>
+
+          <div class="founders-grid">
+            <!-- Ayushi -->
+            <article class="founder-card" id="card-ayushi">
+              <img
+                class="founder-avatar"
+                src="assets/images/Ayushi.jpeg"
+                alt="Ayushi Gupta headshot"
+              />
+              <h3 class="founder-name">Ayushi Gupta</h3>
+              <p class="founder-role">Director, Digital Marketing Strategist</p>
+              <p class="founder-teaser">
+                Creating marketing strategies that turn small business ideas
+                into real growth.
+              </p>
+
+              <div id="founder-more-ayushi" class="founder-more" hidden>
+                <p>
+                  Ayushi specialises in social media, SEO, and online ads
+                  designed for small businesses. With more than 5 years of
+                  experience, she creates marketing that’s practical, easy to
+                  understand, and focused on real results. Every campaign is
+                  tailored to help business owners reach the right audience
+                  without the overwhelm.
+                </p>
+                <p>
+                  <strong>Focus:</strong> Social media that engages, ads that
+                  bring leads, and marketing that makes sense.
+                </p>
+              </div>
+
+              <div class="actions">
+                <button
+                  class="btn founder-toggle"
+                  data-target="founder-more-ayushi"
+                  aria-expanded="false"
+                  aria-controls="founder-more-ayushi"
+                >
+                  Read more
+                </button>
+              </div>
+            </article>
+            <!-- Abhishek -->
+            <article class="founder-card" id="card-abhishek">
+              <img
+                class="founder-avatar"
+                src="assets/images/Abhishek.jpeg"
+                alt="Abhishek Gupta headshot"
+              />
+              <h3 class="founder-name">Abhishek Gupta</h3>
+              <p class="founder-role">Director, Technical Head</p>
+              <p class="founder-teaser">
+                Building simple, affordable websites that help small businesses
+                stand out.
+              </p>
+
+              <div id="founder-more-abhishek" class="founder-more" hidden>
+                <p>
+                  Abhishek has been building websites for over 20 years and
+                  knows what works for small businesses. Instead of tech jargon,
+                  he focuses on creating websites that are easy to use, look
+                  professional, and help businesses attract more customers. From
+                  showcasing your services to making sure your site works
+                  smoothly on mobile, Abhishek ensures you get a site that fits
+                  your budget and your goals.
+                </p>
+                <p>
+                  <strong>Focus:</strong> Affordable websites, clear design, and
+                  reliable ongoing support for small businesses.
+                </p>
+              </div>
+
+              <div class="actions">
+                <button
+                  class="btn founder-toggle"
+                  data-target="founder-more-abhishek"
+                  aria-expanded="false"
+                  aria-controls="founder-more-abhishek"
+                >
+                  Read more
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services" aria-labelledby="services-title">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Our Services</span>
+            <p class="section-subtitle">
+              Simple digital solutions designed for small businesses
+            </p>
+          </div>
+          <div class="service-grid" role="list">
+            <!-- Social Media Management -->
+            <article class="service-card featured" role="listitem">
+              <div class="featured-badge">Most Popular</div>
+              <div class="service-icon">
+                <i class="fab fa-instagram" aria-label="Social media icon"></i>
+                <i class="fab fa-facebook" aria-label="Social media icon"></i>
+                <i class="fab fa-youtube" aria-label="Social media icon"></i>
+                <i class="fab fa-twitter" aria-label="Social media icon"></i>
+                <i class="fab fa-linkedin" aria-label="Social media icon"></i>
+                <i class="fab fa-pinterest" aria-label="Social media icon"></i>
+              </div>
+              <h3>Social Media Management</h3>
+              <p>
+                Build your online presence and connect with more customers
+                through social media.
+              </p>
+              <ul class="service-features">
+                <li>
+                  <i class="fas fa-check" aria-hidden="true"></i>Tailored
+                  content that fits your business
+                </li>
+                <li>
+                  <i class="fas fa-check" aria-hidden="true"></i>Creative design
+                  for eye-catching posts
+                </li>
+                <li>
+                  <i class="fas fa-check" aria-hidden="true"></i>Clear monthly
+                  reports you can understand
+                </li>
+              </ul>
+              <a
+                href="#contact"
+                class="service-link"
+                aria-label="Learn more about social media management"
+              >
+                Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </article>
+
+            <!-- Search Engine Optimization -->
+            <article class="service-card" role="listitem">
+              <div class="service-icon">
+                <i class="fas fa-search" aria-label="SEO icon"></i>
+              </div>
+              <h3>Search Engine Optimization</h3>
+              <p>
+                Help your business show up on Google when people are searching
+                for what you offer.
+              </p>
+              <ul class="service-features">
+                <li>
+                  <i class="fas fa-check" aria-hidden="true"></i>Local SEO to
+                  reach nearby customers
+                </li>
+                <li>
+                  <i class="fas fa-check" aria-hidden="true"></i>Easy-to-read
+                  content improvements
+                </li>
+                <li>
+                  <i class="fas fa-check" aria-hidden="true"></i>Link strategies
+                  that grow visibility
+                </li>
+              </ul>
+              <a
+                href="#contact"
+                class="service-link"
+                aria-label="Learn more about SEO services"
+              >
+                Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </article>
+
+            <!-- Website Development -->
+            <article class="service-card" role="listitem">
+              <div class="service-icon">
+                <i class="fas fa-code" aria-label="Web development icon"></i>
+              </div>
+              <h3>Website Development</h3>
+              <p>
+                Simple, modern websites designed to make your business look
+                professional and bring in new leads.
+              </p>
+              <ul class="service-features">
+                <li>
+                  <i class="fas fa-check" aria-hidden="true"></i>Mobile-friendly
+                  and easy to use
+                </li>
+                <li>
+                  <i class="fas fa-check" aria-hidden="true"></i>E-commerce and
+                  booking options
+                </li>
+                <li>
+                  <i class="fas fa-check" aria-hidden="true"></i>Fast, secure,
+                  and reliable performance
+                </li>
+              </ul>
+              <a
+                href="#contact"
+                class="service-link"
+                aria-label="Learn more about website development"
+              >
+                Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="portfolio">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Our Work</span>
+            <p class="section-subtitle">
+              See how we've helped businesses like yours achieve remarkable
+              growth
+            </p>
+          </div>
+          <div class="portfolio-grid">
+            <div class="portfolio-item">
+              <div class="portfolio-image">
+                <div class="image-placeholder">
+                  <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="portfolio-overlay">
+                  <h4>E-commerce Platform</h4>
+                  <p>300% increase in sales</p>
+                  <a href="#" class="portfolio-link"
+                    ><i class="fas fa-external-link-alt"></i
+                  ></a>
+                </div>
               </div>
             </div>
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <div>
-                <h4>Email</h4>
-                <p>hello@canvasandcode.com</p>
+            <div class="portfolio-item">
+              <div class="portfolio-image">
+                <div class="image-placeholder">
+                  <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="portfolio-overlay">
+                  <h4>Healthcare Website</h4>
+                  <p>500% more appointments</p>
+                  <a href="#" class="portfolio-link"
+                    ><i class="fas fa-external-link-alt"></i
+                  ></a>
+                </div>
               </div>
             </div>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <div>
-                <h4>Office</h4>
-                <p>123 Business Ave, Suite 100<br>New York, NY 10001</p>
+            <div class="portfolio-item">
+              <div class="portfolio-image">
+                <div class="image-placeholder">
+                  <i class="fas fa-utensils"></i>
+                </div>
+                <div class="portfolio-overlay">
+                  <h4>Restaurant Chain</h4>
+                  <p>250% social engagement</p>
+                  <a href="#" class="portfolio-link"
+                    ><i class="fas fa-external-link-alt"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <div class="portfolio-image">
+                <div class="image-placeholder">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="portfolio-overlay">
+                  <h4>Education Platform</h4>
+                  <p>400% student enrollment</p>
+                  <a href="#" class="portfolio-link"
+                    ><i class="fas fa-external-link-alt"></i
+                  ></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="contact-form-wrapper">
-          <form class="contact-form">
-            <div class="form-group">
-              <input type="text" placeholder="Your Name" required />
-              <i class="fas fa-user"></i>
+      </section>
+
+      <section class="testimonials">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Testimonials</span>
+          </div>
+          <div class="testimonial-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>
+                  "Canvas & Code transformed our online presence completely. Our
+                  sales increased by 300% in just 6 months!"
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="author-info">
+                  <h4>Sarah Johnson</h4>
+                  <p>CEO, TechStart</p>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <input type="email" placeholder="Your Email" required />
-              <i class="fas fa-envelope"></i>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>
+                  "The team's expertise in SEO is unmatched. We're now ranking
+                  #1 for all our target keywords."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="author-info">
+                  <h4>Mike Chen</h4>
+                  <p>Founder, GrowthCorp</p>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <input type="tel" placeholder="Your Phone" />
-              <i class="fas fa-phone"></i>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>
+                  "Professional, reliable, and results-driven. Canvas & Code
+                  exceeded all our expectations."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="author-info">
+                  <h4>Emily Davis</h4>
+                  <p>Marketing Director, InnovateLab</p>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <select required>
-                <option value="">Select Service</option>
-                <option value="social-media">Social Media Management</option>
-                <option value="seo">Search Engine Optimization</option>
-                <option value="web-development">Website Development</option>
-                <option value="all">All Services</option>
-              </select>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="form-group">
-              <textarea placeholder="Tell us about your project" rows="5"></textarea>
-              <i class="fas fa-comment"></i>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">
-              Send Message
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </form>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="contact-wrapper">
+            <div class="contact-info">
+              <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <p class="section-subtitle">
+                  Let's discuss how we can help you achieve your digital
+                  marketing goals.
+                </p>
+              </div>
+              <div class="contact-details">
+                <div class="contact-item">
+                  <i class="fas fa-phone"></i>
+                  <div>
+                    <h4>Phone</h4>
+                    <p>+1 (555) 123-4567</p>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <i class="fas fa-envelope"></i>
+                  <div>
+                    <h4>Email</h4>
+                    <p>hello@canvasandcode.com</p>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div>
+                    <h4>Office</h4>
+                    <p>123 Business Ave, Suite 100<br />New York, NY 10001</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form-wrapper">
+              <form class="contact-form">
+                <div class="form-group">
+                  <input type="text" placeholder="Your Name" required />
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="form-group">
+                  <input type="email" placeholder="Your Email" required />
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="form-group">
+                  <input type="tel" placeholder="Your Phone" />
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="form-group">
+                  <select required>
+                    <option value="">Select Service</option>
+                    <option value="social-media">
+                      Social Media Management
+                    </option>
+                    <option value="seo">Search Engine Optimization</option>
+                    <option value="web-development">Website Development</option>
+                    <option value="all">All Services</option>
+                  </select>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="form-group">
+                  <textarea
+                    placeholder="Tell us about your project"
+                    rows="5"
+                  ></textarea>
+                  <i class="fas fa-comment"></i>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                  Send Message
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-section">
+              <div class="footer-logo">
+                <img
+                  src="assets/images/logo.png"
+                  alt="Canvas & Code Logo"
+                  class="footer-logo-image"
+                />
+                <span>Canvas &amp; Code</span>
+              </div>
+              <p>
+                Transforming businesses through innovative digital marketing
+                solutions.
+              </p>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="footer-section">
+              <h4>Services</h4>
+              <ul>
+                <li><a href="#services">Social Media Management</a></li>
+                <li><a href="#services">Search Engine Optimization</a></li>
+                <li><a href="#services">Website Development</a></li>
+                <li><a href="#services">Digital Strategy</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>Resources</h4>
+              <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="#">Free Tools</a></li>
+                <li><a href="#">Support</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2024 Canvas &amp; Code. All rights reserved.</p>
+            <div class="footer-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <div class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <i class="fas fa-chevron-up" aria-hidden="true"></i>
     </div>
-  </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <div class="footer-logo">
-            <img src="assets/images/logo.png" alt="Canvas & Code Logo" class="footer-logo-image">
-            <span>Canvas &amp; Code</span>
-          </div>
-          <p>Transforming businesses through innovative digital marketing solutions.</p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-        <div class="footer-section">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#services">Social Media Management</a></li>
-            <li><a href="#services">Search Engine Optimization</a></li>
-            <li><a href="#services">Website Development</a></li>
-            <li><a href="#services">Digital Strategy</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#">Careers</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Case Studies</a></li>
-            <li><a href="#">Free Tools</a></li>
-            <li><a href="#">Support</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Canvas &amp; Code. All rights reserved.</p>
-        <div class="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  </main>
-
-  <div class="back-to-top" id="back-to-top" aria-label="Back to top">
-    <i class="fas fa-chevron-up" aria-hidden="true"></i>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
