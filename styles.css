@@ -537,7 +537,6 @@ section {
   /* Clip the gradient to the glyphs */
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
   color: transparent;
 
   /* Slight smoothing for big display text */
@@ -1105,9 +1104,7 @@ section {
   color: var(--white);
 }
 
-.testimonials .section-tag {
-  background: linear-gradient(135deg, var(--secondary-color), var(--warning));
-}
+
 
 .testimonials .section-title {
   color: var(--white);
