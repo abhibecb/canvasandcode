@@ -1210,6 +1210,10 @@ section {
   border-radius: var(--border-radius-lg);
   padding: 2rem;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
 }
 
 .testimonial-card:hover {
@@ -1230,10 +1234,11 @@ section {
   font-style: italic;
 }
 .testimonial-content{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
 }
 /* Read More Button Styling */
 .read-more-btn {
@@ -1253,6 +1258,35 @@ section {
 .read-more-btn:hover {
   background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
   transform: translateY(-2px);
+}
+
+/* Read More Link Styling - Inline with text */
+.read-more-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-left: 0.25rem;
+  transition: var(--transition);
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+}
+
+.read-more-link:hover {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+/* Hide legacy button styling */
+.read-more-btn {
+  display: none !important;
 }
 
 .testimonial-full {
@@ -1282,6 +1316,9 @@ section {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 .section-title {
   font-size: var(--font-size-4xl);
@@ -1326,6 +1363,15 @@ section {
 .author-info h4 {
   font-weight: 600;
   margin-bottom: 0.25rem;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.author-info p {
+  color: var(--gray-300);
+  font-size: 0.9rem;
+  margin: 0;
+  font-style: normal;
 }
 
 .author-info p {

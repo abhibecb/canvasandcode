@@ -401,19 +401,21 @@ function initializeApp() {
 }
 
 // Testimonial Read More Functionality
-function toggleTestimonial(button) {
-  const testimonialCard = button.closest('.testimonial-card');
+function toggleTestimonial(link) {
+  const testimonialCard = link.closest('.testimonial-card');
   const preview = testimonialCard.querySelector('.testimonial-preview');
   const full = testimonialCard.querySelector('.testimonial-full');
   
   if (full.style.display === 'none') {
     preview.style.display = 'none';
-    full.style.display = 'block';
-    button.textContent = 'Show less';
+    full.style.display = 'inline';
+    link.textContent = 'show less';
+    link.style.display = 'inline';
   } else {
-    preview.style.display = 'block';
+    preview.style.display = 'inline';
     full.style.display = 'none';
-    button.textContent = 'Read more';
+    link.textContent = 'read more';
+    link.style.display = 'inline';
   }
 }
 
