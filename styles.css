@@ -545,6 +545,11 @@ section {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Utility class for zero padding */
+.p-0 {
+  padding: 0 !important;
+}
+
 /* Fallback for browsers without text background-clip support */
 @supports not ((background-clip: text) or (-webkit-background-clip: text)) {
   .section-tag {
