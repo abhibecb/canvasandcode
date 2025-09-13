@@ -395,6 +395,26 @@ function initializeApp() {
 
   // Services Carousel Functionality
   initServicesCarousel();
+
+  // Testimonials Carousel Functionality
+  initTestimonialsCarousel();
+}
+
+// Testimonial Read More Functionality
+function toggleTestimonial(button) {
+  const testimonialCard = button.closest('.testimonial-card');
+  const preview = testimonialCard.querySelector('.testimonial-preview');
+  const full = testimonialCard.querySelector('.testimonial-full');
+  
+  if (full.style.display === 'none') {
+    preview.style.display = 'none';
+    full.style.display = 'block';
+    button.textContent = 'Show less';
+  } else {
+    preview.style.display = 'block';
+    full.style.display = 'none';
+    button.textContent = 'Read more';
+  }
 }
 
 function initServicesCarousel() {
@@ -475,6 +495,164 @@ function initServicesCarousel() {
   
   // Initialize carousel
   updateCarousel();
+}
+
+// Testimonials Carousel Functionality
+function initTestimonialsCarousel() {
+  const carousel = document.querySelector('.testimonial-grid');
+  const prevButton = document.querySelector('.testimonial-carousel-container .carousel-arrow-left');
+  const nextButton = document.querySelector('.testimonial-carousel-container .carousel-arrow-right');
+  const dotsContainer = document.querySelector('.testimonial-dots');
+  
+  if (!carousel || !prevButton || !nextButton) return;
+  
+  let currentIndex = 0;
+  let autoPlayInterval;
+  const totalCards = carousel.children.length;
+  
+  // Function to get cards per view based on screen size
+  function getCardsPerView() {
+    if (window.innerWidth <= 768) return 1;
+    if (window.innerWidth <= 1024) return 2;
+    return 3;
+  }
+  
+  // Function to get total pages for dots
+  function getTotalPages() {
+    const cardsPerView = getCardsPerView();
+    return Math.ceil(totalCards / cardsPerView);
+  }
+  
+  // Function to create dots
+  function createDots() {
+    if (!dotsContainer) return;
+    
+    dotsContainer.innerHTML = '';
+    const totalPages = getTotalPages();
+    
+    for (let i = 0; i < totalPages; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'carousel-dot';
+      if (i === 0) dot.classList.add('active');
+      
+      dot.addEventListener('click', () => {
+        currentIndex = i;
+        updateCarousel();
+        resetAutoPlay();
+      });
+      
+      dotsContainer.appendChild(dot);
+    }
+  }
+  
+  // Function to update dots
+  function updateDots() {
+    if (!dotsContainer) return;
+    
+    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+    const cardsPerView = getCardsPerView();
+    const currentPage = Math.floor(currentIndex / cardsPerView);
+    
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentPage);
+    });
+  }
+  
+  // Function to update carousel position
+  function updateCarousel() {
+    const cardsPerView = getCardsPerView();
+    const maxIndex = Math.max(0, totalCards - cardsPerView);
+    
+    // Ensure currentIndex is within bounds
+    currentIndex = Math.min(currentIndex, maxIndex);
+    
+    const cardWidth = carousel.children[0].offsetWidth;
+    const gap = 32; // 2rem in pixels
+    const translateX = -(currentIndex * (cardWidth + gap));
+    
+    carousel.style.transform = `translateX(${translateX}px)`;
+    
+    // Update button states
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex >= maxIndex;
+    
+    // Update dots
+    updateDots();
+  }
+  
+  // Auto-play functionality
+  function startAutoPlay() {
+    autoPlayInterval = setInterval(() => {
+      const cardsPerView = getCardsPerView();
+      const maxIndex = Math.max(0, totalCards - cardsPerView);
+      
+      if (currentIndex >= maxIndex) {
+        currentIndex = 0; // Loop back to start
+      } else {
+        currentIndex++;
+      }
+      updateCarousel();
+    }, 5000); // Change slide every 5 seconds
+  }
+  
+  function stopAutoPlay() {
+    if (autoPlayInterval) {
+      clearInterval(autoPlayInterval);
+    }
+  }
+  
+  function resetAutoPlay() {
+    stopAutoPlay();
+    startAutoPlay();
+  }
+  
+  // Event listeners for navigation buttons
+  prevButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+      resetAutoPlay();
+    }
+  });
+  
+  nextButton.addEventListener('click', () => {
+    const cardsPerView = getCardsPerView();
+    const maxIndex = Math.max(0, totalCards - cardsPerView);
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+      updateCarousel();
+      resetAutoPlay();
+    }
+  });
+  
+  // Pause auto-play on hover
+  carousel.addEventListener('mouseenter', stopAutoPlay);
+  carousel.addEventListener('mouseleave', startAutoPlay);
+  
+  // Handle window resize
+  window.addEventListener('resize', debounce(() => {
+    createDots();
+    updateCarousel();
+  }, 250));
+  
+  // Keyboard navigation
+  carousel.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      prevButton.click();
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      nextButton.click();
+    }
+  });
+  
+  // Make carousel focusable for keyboard navigation
+  carousel.tabIndex = 0;
+  
+  // Initialize carousel
+  createDots();
+  updateCarousel();
+  startAutoPlay();
 }
 
 // Additional utility functions
