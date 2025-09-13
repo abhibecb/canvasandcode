@@ -1,5 +1,30 @@
 // Premium WordPress Theme JavaScript
+
+// Function to load header component
+async function loadHeaderComponent() {
+  try {
+    const response = await fetch('components/header.html');
+    const headerHTML = await response.text();
+    
+    // Find the header placeholder and replace it with the loaded content
+    const headerPlaceholder = document.getElementById('header-placeholder');
+    if (headerPlaceholder) {
+      headerPlaceholder.outerHTML = headerHTML;
+    }
+  } catch (error) {
+    console.error('Error loading header component:', error);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+  // Load header component first
+  loadHeaderComponent().then(() => {
+    // Initialize all other functionality after header is loaded
+    initializeApp();
+  });
+});
+
+function initializeApp() {
   // Header scroll effect
   const header = document.querySelector('.header');
   const navToggle = document.getElementById('nav-toggle');
@@ -370,7 +395,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Services Carousel Functionality
   initServicesCarousel();
-});
+}
 
 function initServicesCarousel() {
   const carousel = document.querySelector('.service-grid');
